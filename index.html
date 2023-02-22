@@ -1,0 +1,72 @@
+<!-- TEMPERATURE CONVERTER -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <title>Temperature Converter</title>
+
+</head>
+
+<body>
+
+    <div id="container">
+        <h1>Temperature &nbsp; Converter  &nbsp;<i class="fa fa-thermometer-half" aria-hidden="true"></i></h1>
+
+        <div class="inputs">
+            <div class="sec">
+                <label for="">Celsius</label><br>
+                <input type="number" onclick="this.select()" value="0" id="cel"> 
+            </div>
+
+            <div class="equal">=</div>
+
+            <div class="sec">
+                <label for="">Fahrenheit</label><br>
+                <input type="number" onclick="this.select()" value="32" id="fah">
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var cel = document.getElementById("cel");
+        var fah = document.getElementById("fah");
+
+
+
+
+
+        cel.addEventListener('input', function () {
+            let c = this.value;
+            let f = (c * 9 / 5) + 32;
+            if (!Number.isInteger(f)) {
+                f = f.toFixed(4);
+            };
+            fah.value = f;
+
+        });
+
+
+        fah.addEventListener('input', function () {
+            let f = this.value;
+            let c = (f - 32) * 5 / 9;
+            if (!Number.isInteger(c)) {
+                c = c.toFixed(4);
+            };
+            cel.value = c;
+
+        });
+
+
+
+    </script>
+
+</body>
+
+</html>
