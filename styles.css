@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+
+        body {
+            font-family: 'Play', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        input {
+            font-family: 'Play', sans-serif;
+            font-size: larger;
+            font-weight: 500;
+            margin-top: 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+
+        .sec{
+            text-align: left;
+        }
+
+        label{
+            font-size: larger;
+            font-weight: 600;
+        
+        }
+
+        .inputs{
+            display: flex;
+            gap: 5%;
+            justify-content: center;
+        }
+
+        h1{
+            padding: 5% 0 3% 0;
+            margin: 0;
+        }
+
+        .equal{
+            font-size: xx-large;
+            transform: translateY(24px);
+        }
+
+        #container{
+            background-color: #3C6255;
+            height: 100vh;
+        }
+
+
+        @media (max-width:550px){
+            h1{
+            padding: 10% 0 10% 0;
+            margin: 0;
+        }
+
+
+        .inputs{
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .equal{
+            display: none;
+        }
+
+        .sec{
+            margin-top:10% ;
+        }
+
+     
+        }
+
+
+        @media (max-width:450px){
+            h1{
+            font-size: 27px;
+        }
+        }
